@@ -32,6 +32,10 @@ describe 'twitter users pages', type: :feature do
               expect(TwitterUser.count).to eq 1
             end
 
+            it 'downcases submitted screen_name' do
+              expect(TwitterUser.first.screen_name).to eq 'milesua'
+            end
+
             it 'redirects to feeds page' do
               expect(current_path).to eq "/feed/#{TwitterUser.first.id}"
             end

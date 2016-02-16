@@ -18,4 +18,10 @@ describe TwitterUser do
       expect(twitter_user.tweets).to eq []
     end
   end
+
+  context 'after saving' do
+    it 'has a downcased screen_name attribute' do
+      expect(twitter_user.screen_name).to eq 'milesua'
+    end
+  end
 end
