@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :feeds
+  devise_for :users
+  get '/feed/:twitter_user_id', to: 'feed#show', as: :feed
   resources :twitter_users
   root 'twitter_users#new'
 end
