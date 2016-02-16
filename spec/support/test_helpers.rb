@@ -16,4 +16,13 @@ module TestHelpers
     fill_in 'twitter_user_screen_name', with: 'MilesUA'
     click_button 'Go to my feed'
   end
+
+  def it_has_attributes(*attributes)
+    record = described_class.new
+    attributes.each do |attribute|
+      it "has #{attribute}" do
+        expect{record.send(attribute)}.to_not raise_error
+      end
+    end
+  end
 end
