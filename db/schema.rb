@@ -11,9 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160216000430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "twitter_users", force: :cascade do |t|
+    t.string "screen_name"
+  end
+
+  add_index "twitter_users", ["screen_name"], name: "index_twitter_users_on_screen_name", using: :btree
 
 end
