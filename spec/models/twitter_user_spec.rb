@@ -12,4 +12,10 @@ describe TwitterUser do
       expect {FactoryGirl.create(:twitter_user, screen_name: twitter_user.screen_name)}.to raise_error(ActiveRecord::RecordInvalid)
     end
   end
+
+  describe 'associations' do
+    it 'has many tweets' do
+      expect(twitter_user.tweets).to eq []
+    end
+  end
 end
