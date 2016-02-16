@@ -12,6 +12,8 @@ gem 'haml-rails'
 gem 'dictate_css'
 gem 'grids_lite'
 gem 'devise'
+gem 'twitter'
+gem 'font-awesome-rails'
 
 group :development do
   gem 'web-console', '~> 2.0'
@@ -27,6 +29,8 @@ group :development, :test do
 end
 
 group :test do
+  gem 'vcr'
+  gem 'webmock'
   gem 'capybara', '> 2.3.0'
   gem 'capybara-webkit', '~> 1.1.0'
   gem 'selenium-webdriver'
