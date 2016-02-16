@@ -13,7 +13,6 @@ gem 'dictate_css'
 gem 'grids_lite'
 gem 'devise'
 gem 'twitter'
-gem 'font-awesome-rails'
 
 group :development do
   gem 'web-console', '~> 2.0'

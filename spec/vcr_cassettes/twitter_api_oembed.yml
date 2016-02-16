@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/oembed.json?id=572757724351492098&omit_script=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.14.0
+      Authorization:
+      - OAuth oauth_consumer_key="ENV['NAMETHISTWEET_TWITTER_CONSUMER_KEY']", oauth_nonce="299bcec4dc45abed8aa5e9c2deca9411",
+        oauth_signature="zXApIIsWLrvTuph8RkaEOgZbkw4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1455603946", oauth_token="ENV['NAMETHISTWEET_TWITTER_ACCESS_TOKEN']",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - must-revalidate, max-age=3153600000
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '386'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 16 Feb 2016 06:25:46 GMT
+      Expires:
+      - Thu, 23 Jan 2116 06:25:46 GMT
+      Last-Modified:
+      - Tue, 16 Feb 2016 06:25:46 GMT
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A145560394689478935; Domain=.twitter.com; Path=/; Expires=Thu,
+        15-Feb-2018 06:25:46 UTC
+      - lang=en; Path=/
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - 3a03a76ea29640cc55e540ccf9d08120
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '175'
+      X-Rate-Limit-Reset:
+      - '1455604381'
+      X-Response-Time:
+      - '35'
+      X-Transaction:
+      - 08a2c48d6d2e7064
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"cache_age":"3153600000","url":"https:\/\/twitter.com\/MilesUA\/status\/572757724351492098","height":null,"provider_url":"https:\/\/twitter.com","provider_name":"Twitter","author_name":"Miles","version":"1.0","author_url":"https:\/\/twitter.com\/MilesUA","type":"rich","html":"\u003Cblockquote
+        class=\"twitter-tweet\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EIn retrospect
+        I&#39;m not sure I liked this season of \u003Ca href=\"https:\/\/twitter.com\/hashtag\/HouseOfCards?src=hash\"\u003E#HouseOfCards\u003C\/a\u003E
+        as a whole\u003C\/p\u003E&mdash; Miles (@MilesUA) \u003Ca href=\"https:\/\/twitter.com\/MilesUA\/status\/572757724351492098\"\u003EMarch
+        3, 2015\u003C\/a\u003E\u003C\/blockquote\u003E\n","width":550}'
+    http_version: 
+  recorded_at: Tue, 16 Feb 2016 06:25:46 GMT
+recorded_with: VCR 3.0.0

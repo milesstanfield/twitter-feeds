@@ -1,2 +1,4 @@
-- @tweets.each do |tweet|
-  = tweet.url
+- @presented_tweets.each do |tweet|
+  = tweet.html.html_safe
+
+  = render 'feed/twitter_widgets_script'

@@ -1,3 +1,6 @@
-= form_for @twitter_user do |f|
-  = f.text_field :screen_name, placeholder: 'your twitter screen name'
-  = f.submit 'Go to my feed'
+.container.l-form-width.absolute-center
+  .authform
+    = form_for @twitter_user do |f|
+      .form-group
+        = f.text_field :screen_name, placeholder: 'your twitter screen name', class: 'form-control'
+      = f.submit 'Go to my feed', class: 'btn btn-lg btn-primary btn-block'

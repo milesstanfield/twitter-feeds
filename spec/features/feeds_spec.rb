@@ -17,8 +17,8 @@ describe 'feed', type: :feature do
       before(:each){ visit "/feed/#{twitter_user.id}" }
 
       describe 'tweets' do
-        it 'displays tweet url' do
-          expect(page).to have_text 'https://twitter.com/MilesUA/status/572757724351492098'
+        it 'displays tweet text' do
+          expect(page).to have_text 'In retrospect I\'m not sure I liked this season of #HouseOfCards as a whole'
         end
       end
     end

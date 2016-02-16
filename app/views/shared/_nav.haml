@@ -1,1 +1,11 @@
-%nav
+%nav.m-border-bottom.bg-white
+  .l-max-content-width.horizontal-center.l-side-padding
+    .relative.l-nav-height.width-100
+      .text-right
+        - if user_signed_in?
+          = link_to 'Log out', destroy_user_session_path, method: :delete
+        - unless user_signed_in?
+          = link_to 'Log in', new_user_session_path
+
+      = image_tag 'twitter_icon.png', class: 'absolute-center l-twitter-icon-size'
+      = link_to 'TwitterFeeds', root_path, class: 'navbar-brand'

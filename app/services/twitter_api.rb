@@ -8,4 +8,8 @@ class TwitterApi
   def recent_tweets(screen_name)
     client.user_timeline screen_name
   end
+
+  def oembed(url)
+    client.oembed(url, {omit_script: true})
+  end
 end

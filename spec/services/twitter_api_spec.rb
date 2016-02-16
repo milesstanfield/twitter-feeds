@@ -30,4 +30,17 @@ describe TwitterApi do
       end
     end
   end
+
+  describe 'oembed(url)' do
+    let(:tweet){ FactoryGirl.create(:tweet) }
+    let(:oembed){ twitter_api.oembed(tweet.url) }
+
+    describe 'returned oembed object' do
+      it 'has formatted html' do
+        VCR.use_cassette 'twitter_api_oembed' do
+          expect(oembed.html).to eq "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">In retrospect I&#39;m not sure I liked this season of <a href=\"https://twitter.com/hashtag/HouseOfCards?src=hash\">#HouseOfCards</a> as a whole</p>&mdash; Miles (@MilesUA) <a href=\"https://twitter.com/MilesUA/status/572757724351492098\">March 3, 2015</a></blockquote>\n"
+        end
+      end
+    end
+  end
 end

@@ -10,11 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require 'base'
- *= require 'layouts'
- *= require 'modules'
- *= require 'dictate_css/base'
- *= require 'grids_lite/base'
- *= require 'grids_lite/col-1'
+ *= require base
+ *= require layouts
+ *= require modules
+ *= require dictate_css/base
+ *= require dictate_css/colors
+ *= require grids_lite/base
+ *= require grids_lite/col-1
+ *= require bootstrap_forms_and_buttons.min
  *= require_self
  */
